@@ -1,24 +1,58 @@
-# WordPress Migration from classic hosting to AWS (EC2 + RDS + S3)
+# WordPress Migration to AWS (EC2 + RDS + S3 + CloudFront)
 
-This repository documents the full end-to-end migration of a WordPress website 
-from a traditional shared hosting provider  to AWS.
+This repository documents the migration of a WordPress site from a traditional hosting environment to AWS, using an architecture based on EC2, RDS, S3 and CloudFront.
 
-The goal is to build a clean, professional, portfolio-ready cloud project 
-following AWS best practices.
+The goal was to reproduce a real-world production scenario, ensuring the migrated environment remained fully functional, secure and optimized for long-term operation.
 
-## Target Architecture
-- EC2 for WordPress
-- RDS MySQL
-- S3 for backups and optional media storage
-- (Optional) Application Load Balancer + ACM for HTTPS
-- CloudFront CDN
+---
 
-## Project Structure
-All documentation, screenshots, and command references are stored inside `/docs/`.
+## Architecture Overview
 
-## Skills Demonstrated
-- AWS EC2, RDS, S3, IAM, Security Groups
-- Linux server administration
-- WordPress backup, restore, and migration workflow
-- Cloud architecture fundamentals
+The final deployment uses the following AWS components:
 
+- **Amazon EC2** – hosts the WordPress application using Apache + PHP
+- **Amazon RDS (MySQL)** – offloads the database to a managed backend
+- **Amazon EBS** – stores static assets and media
+- **Amazon CloudFront** – CDN layer in front of the application
+- **AWS Certificate Manager (ACM)** – provides the HTTPS certificate
+- **Route 53** – manages DNS and subdomain routing
+
+---
+
+## Screenshots
+
+All screenshots (1–37) documenting each phase of the process are stored under:
+
+/screenshots
+
+
+---
+
+## Full Documentation
+
+The complete step-by-step migration guide is available at:
+
+/docs/migracion-wordpress-aws.md
+
+
+---
+
+## Technologies Used
+
+- Amazon Linux 2023
+- Apache 2.4
+- PHP 8.x
+- WordPress (latest)
+- RDS MySQL 8
+- AWS CLI
+- WP-CLI
+- S3 + CloudFront
+- ACM
+- Route 53
+
+---
+
+## Final Result
+
+The WordPress instance is now fully migrated and operational on AWS.
+Screenshot **#37** shows the final state with both the frontend and dashboard running under HTTPS.
