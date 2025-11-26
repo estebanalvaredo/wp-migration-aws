@@ -52,7 +52,26 @@ The complete step-by-step migration guide is available at:
 
 ---
 
+```text
+wp-migration-aws/
+├── docs/
+│ ├── migracion-wordpress-aws.md
+│ └── screenshots/
+└── README.md
+```
+
+---
+
 ## Final Result
 
 The WordPress instance is now fully migrated and operational on AWS.
 Screenshot **#37** shows the final state with both the frontend and dashboard running under HTTPS.
+
+---
+
+## Author
+Esteban Alvaredo
+Cloud & Systems Engineer (AWS SAA-C03 Certified)
+
+LinkedIn: https://www.linkedin.com/in/estebanalvaredo
+Portfolio: https://cloud.estebanalvaredo.com
